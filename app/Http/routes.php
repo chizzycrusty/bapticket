@@ -13,14 +13,19 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/', function () {
-        return view('welcome');
-    });
-
-});
-
-Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
+
+    Route::get('/registerchoice', function () {
+        return view('auth.registerchoice');
+    });
+
+    Route::get('/', function() {
+    	return view('welcome');
+	});
+
+    Route::get('/registerorga', function () {
+        return view('auth.registerorga');
+    });
 });

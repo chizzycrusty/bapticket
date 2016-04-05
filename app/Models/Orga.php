@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Orga extends Authenticatable
 {
     /**
      * The attributes that are mass assignable.
@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'tel', 'email', 'password', 'adresse', 'postal', 'city', 'country', 
+        'name', 'email', 'password',
     ];
 
     /**
