@@ -36,17 +36,19 @@ return [
     */
 
     'guards' => [
-        'web' => [
+        'user' =>[
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'user',
         ],
-
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
+        'orga' => [
+            'driver' => 'session',
+            'provider' => 'orga',
         ],
-    ],
-
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
+    ],  
     /*
     |--------------------------------------------------------------------------
     | User Providers
@@ -65,16 +67,19 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'user' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
-    ],
+        'orga' => [
+            'driver' => 'eloquent',
+            'model' => App\Orga::class,
+        ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ]
+    ],  
 
     /*
     |--------------------------------------------------------------------------
@@ -98,6 +103,18 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'email' => 'auth.emails.password',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'orgas' => [
+            'provider' => 'orga',
+            'email' => 'auth.emails.password',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'admins' => [
+            'provider' => 'admin',
             'email' => 'auth.emails.password',
             'table' => 'password_resets',
             'expire' => 60,

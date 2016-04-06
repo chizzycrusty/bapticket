@@ -17,15 +17,28 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/home', 'HomeController@index');
 
-    Route::get('/registerchoice', function () {
-        return view('auth.registerchoice');
-    });
-
     Route::get('/', function() {
     	return view('welcome');
 	});
 
-    Route::get('/registerorga', function () {
-        return view('auth.registerorga');
-    });
+    // Admin Login Routes...
+    Route::get('/admin/login','AdminAuth\AuthController@showLoginForm');
+    Route::post('/admin/login','AdminAuth\AuthController@login');
+    Route::get('/admin/logout','AdminAuth\AuthController@logout');
+
+    // Admin Registration Routes...
+    Route::get('admin/register', 'AdminAuth\AuthController@showRegistrationForm');
+    Route::post('admin/register', 'AdminAuth\AuthController@register');
+    Route::get('/admin', 'AdminController@index');
+
+    // Orga Login Routes...
+    Route::get('/orga/login','OrgaAuth\AuthController@showLoginForm');
+    Route::post('/orga/login','OrgaAuth\AuthController@login');
+    Route::get('/orga/logout','OrgaAuth\AuthController@logout');
+
+    // Orga Registration Routes...
+    Route::get('orga/register', 'OrgaAuth\AuthController@showRegistrationForm');
+    Route::post('orga/register', 'OrgaAuth\AuthController@register');
+    Route::get('/orga', 'OrgaController@index');
+    
 });
