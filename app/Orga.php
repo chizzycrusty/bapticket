@@ -12,7 +12,7 @@ class Orga extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'surname', 'tel', 'email', 'password', 'adresse', 'postal', 'city', 'country', 
     ];
 
     /**

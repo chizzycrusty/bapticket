@@ -8,9 +8,9 @@
                 <div class="panel-heading">Êtes-vous participant ou organisateur ?</div>
 
                 <div class="panel-body">
-                    <a href="{{ url('/register') }}">User</a>
+                    <a href="{{ url('/register') }}">Participant</a>
                     <br>
-                    <a href="{{ url('/registerorga') }}">Orga</a>
+                    <a href="{{ url('orga/register') }}">Organisateur</a>
                 </div>
             </div>
         </div>

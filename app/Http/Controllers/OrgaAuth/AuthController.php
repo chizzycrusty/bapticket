@@ -65,11 +65,11 @@ class AuthController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return User
+     * @return Orga
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Orga::create([
             'name' => $data['name'],
             'surname' => $data['surname'],
             'tel' => $data['tel'],
@@ -82,7 +82,7 @@ class AuthController extends Controller
         ]);
     }
 
-    protected $redirectTo = '/orga';
+
     protected $guard = 'orga';
 
     public function showLoginForm()
@@ -93,8 +93,11 @@ class AuthController extends Controller
 
         return view('orga.auth.login');
     }
+
     public function showRegistrationForm()
     {
         return view('orga.auth.register');
     }  
 }
+
+

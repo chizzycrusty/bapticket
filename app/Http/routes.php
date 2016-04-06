@@ -21,6 +21,10 @@ Route::group(['middleware' => ['web']], function () {
     	return view('welcome');
 	});
 
+    Route::get('/registerchoice', function() {
+        return view('auth.registerchoice');
+    });
+
     // Admin Login Routes...
     Route::get('/admin/login','AdminAuth\AuthController@showLoginForm');
     Route::post('/admin/login','AdminAuth\AuthController@login');
