@@ -30,7 +30,9 @@ class CreateUsersTable extends Migration
             $table->text('sectors')->nullable();
             $table->text('known')->nullable();
             $table->text('axes')->nullable();
-            $table->tinyInteger('newsletter')->nullable();
+            $table->tinyInteger('newsletter')->nullable()->default(0);
+            $table->tinyInteger('is_admin')->nullable()->default(0);
+            $table->tinyInteger('is_orga')->nullable()->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

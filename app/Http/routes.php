@@ -21,9 +21,7 @@ Route::group(['middleware' => ['web']], function () {
     	return view('welcome');
 	});
 
-    Route::get('/registerchoice', function() {
-        return view('auth.registerchoice');
-    });
+    Route::resource('/event', 'EventController');
 
     // Admin Login Routes...
     Route::get('/admin/login','AdminAuth\AuthController@showLoginForm');

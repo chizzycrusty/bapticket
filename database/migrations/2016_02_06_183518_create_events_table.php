@@ -18,10 +18,12 @@ class CreateEventsTable extends Migration
             $table->string('subject');
             $table->string('host');
             $table->string('sector');
+            $table->text('content');
             $table->string('place');
             $table->date('date');
             $table->string('duration');
             $table->text('materiel');
+            $table->integer('user_id')->unsigned();
             $table->timestamps();
         });
     }
