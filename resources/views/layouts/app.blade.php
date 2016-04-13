@@ -48,7 +48,7 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
-                    @if(Auth::check())
+                    @if(Auth::check() && Auth::user()->isAdmin && Auth::user()->isOrga)
                     <li><a href="{{ route('event.create') }}">Créer un event</a></li>
                     @endif
                 </ul>

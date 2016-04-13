@@ -63,7 +63,7 @@ class EventController extends Controller
         $input['user_id'] = Auth::user() -> id;
         $event -> fill($input) -> save();
 
-        return redirect() -> route('event.create') -> with('success', 'Votre évènement a été créer');
+        return redirect() -> route('event.create') -> with('success', 'Votre évènement a été créé');
     }
 
     /**
