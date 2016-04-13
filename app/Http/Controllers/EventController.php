@@ -53,7 +53,8 @@ class EventController extends Controller
             'host' => 'required',
             'sector' => 'required',
             'content' => 'required',
-            'place' => 'required',
+            'localisation' => 'required',
+            'places' => 'required',
             'date' => 'required',
             'duration' => 'required'
         ]);

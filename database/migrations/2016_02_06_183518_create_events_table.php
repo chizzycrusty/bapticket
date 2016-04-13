@@ -19,7 +19,8 @@ class CreateEventsTable extends Migration
             $table->string('host');
             $table->string('sector');
             $table->text('content');
-            $table->string('place');
+            $table->string('localisation');
+            $table->bigInteger('places');
             $table->date('date');
             $table->string('duration');
             $table->text('materiel');

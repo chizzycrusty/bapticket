@@ -44,8 +44,14 @@
                                 !!}
                             </div>
                             <div class="form-group">
-                                {!! Form::label('place', 'Localisation') !!}
-                                {!! Form::text('place', '', 
+                                {!! Form::label('localisation', 'Localisation') !!}
+                                {!! Form::text('localisation', '', 
+                                    ['class' => 'form-control']) 
+                                !!}
+                            </div>
+                            <div class="form-group">
+                                {!! Form::label('places', 'Places disponibles') !!}
+                                {!! Form::text('places', '', 
                                     ['class' => 'form-control']) 
                                 !!}
                             </div>
