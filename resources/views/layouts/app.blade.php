@@ -57,7 +57,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
                     <li><a href="{{ route('event.index') }}">Events</a></li>
-                    @if(Auth::check() && Auth::user()->is_orga)
+                    @if(Auth::check())
                     <li><a href="{{ route('event.create') }}">Créer un event</a></li>
                     @endif
                 </ul>

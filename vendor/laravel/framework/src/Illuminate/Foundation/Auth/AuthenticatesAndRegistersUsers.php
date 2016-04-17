@@ -9,5 +9,3 @@ trait AuthenticatesAndRegistersUsers
         AuthenticatesUsers::getGuard insteadof RegistersUsers;
     }
 }
-
-
