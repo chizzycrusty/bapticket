@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="{{asset("slick/slick/slick.css")}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset("slick/slick/slick-theme.css")}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset("css/slider.css")}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset("css/slider-tab.css")}}" media="screen and (max-width: 1340px)"/>
+    <link rel="stylesheet" type="text/css" href="{{asset("css/slider-mobile.css")}}" media="screen and (max-width: 640px)"/>
+    <link rel="stylesheet" type="text/css" href="{{asset("css/slider-mid-tab.css")}}" media="screen and (min-width: 641px) and (max-width: 999px) "/>
     {{--JS--}}
 
     <style>
@@ -40,10 +43,18 @@
 </head>
 <body id="app-layout">
 <div class="menu">
-    <div class="container-fluid">
+    <div class="container-fluid menu-nav">
         <div class="barre-menu">
             <ul>
-                <li class="logo"><a href="{{ url('/') }}"><img src="{{ asset("img/logo.png") }}" alt="" class="img-responsive"></a></li>
+                <li class="bars" id="bars"><img src="{{ asset("img/menu-bars.png") }}" alt="barre de menu" class="img-responsive"></li>
+                <li class="logo" id="logo"><a href="{{ url('/') }}"><img src="{{ asset("img/logo.png") }}" alt="Logo WiTicket" class="img-responsive"></a></li>
+                <li class="find"><img src="{{ asset("img/search.png") }}" alt="barre de menu" class="img-responsive"></li>
+                <li class="retour-click" id="retour"><img src="{{ asset("img/back.png") }}" alt="barre de menu" class="img-responsive"></li>
+                <li class="retour-clicks" id="search-bar">
+                    <form action="" class="form-search-mob">
+                        <input class="input-search" type="text" placeholder="   Mots-clés..."/>
+                    </form>
+                </li>
                 <li class="search">
                     <form action="" class="formulaire">
                         <div class="cherche">
@@ -74,12 +85,15 @@
                         </a>
                     </li>
                     @else
-                        <li class="dropdown">
+                        <li class="dropdown account">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
+                                {{ Auth::user()->name }} {{ Auth::user()->surname }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
+                                @if(Auth::check())
+                                    <li><a href="{{ route('event.create') }}">Créer un event</a></li>
+                                @endif
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
                         </li>
@@ -95,8 +109,7 @@
             <img src="{{asset("img/conf-1.jpg")}}" alt="" class="img-responsive">
             <div class="slide-1">
                 <h2>Lorem ipsum dolor sit amet</h2>
-                <p>salut , consectetur adipisicing elit. A ab accusantium aliquid ea eum facilis ipsa ipsum laboriosam, molestias neque
-                    , nihil nisi placeat quo recusandae repudiandae soluta totam ut vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores assumenda blanditiis, debitis deleniti dicta, doloribus earum enim eum explicabo fugit iure molestias obcaecati odio odit perspiciatis placeat rerum tenetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis dolores eaque expedita, iure porro rem sint unde! Autem corporis ex facilis fuga harum in iure reiciendis tempore ut voluptate.</p>
                 <div class="participe">
                     <button class="participer">Participer</button>
                     <button class="plus">En savoir plus</button>
@@ -105,10 +118,9 @@
         </div>
         <div>
             <img src="{{asset("img/conf-2.jpg")}}" alt="" class="img-responsive">
-            <div class="slide-1">
+            <div class="slide-2">
                 <h2>Lorem ipsum dolor sit amet</h2>
-                <p>salut , consectetur adipisicing elit. A ab accusantium aliquid ea eum facilis ipsa ipsum laboriosam, molestias neque
-                    , nihil nisi placeat quo recusandae repudiandae soluta totam ut vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores assumenda blanditiis, debitis deleniti dicta, doloribus earum enim eum explicabo fugit iure molestias obcaecati odio odit perspiciatis placeat rerum tenetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloremque et facilis in laborum officiis porro, quae quas recusandae voluptas! Ab cumque eos ex ipsa mollitia officiis pariatur quo voluptatibus.</p>
                 <div class="participe">
                     <button class="participer">Participer</button>
                     <button class="plus">En savoir plus</button>
@@ -117,10 +129,9 @@
         </div>
         <div>
             <img src="{{asset("img/conf-3.jpg")}}" alt="" class="img-responsive">
-            <div class="slide-1">
+            <div class="slide-3">
                 <h2>Lorem ipsum dolor sit amet</h2>
-                <p>salut , consectetur adipisicing elit. A ab accusantium aliquid ea eum facilis ipsa ipsum laboriosam, molestias neque
-                    , nihil nisi placeat quo recusandae repudiandae soluta totam ut vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. A asperiores assumenda blanditiis, debitis deleniti dicta, doloribus earum enim eum explicabo fugit iure molestias obcaecati odio odit perspiciatis placeat rerum tenetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem dolorem doloremque dolores est, harum, inventore ipsum, iusto laudantium modi molestiae omnis quis ratione repellat vero voluptas? Adipisci, necessitatibus?</p>
                 <div class="participe">
                     <button class="participer">Participer</button>
                     <button class="plus">En savoir plus</button>
@@ -142,6 +153,8 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="{{asset("slick/slick/slick.min.js")}}"></script>
+    <script type="text/javascript" src="{{asset("js/menu.js")}}"></script>
+
     <script type="text/javascript">
         $(document).ready(function(){
             $('.slider').slick({

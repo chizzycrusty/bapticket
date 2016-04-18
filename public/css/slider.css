@@ -24,6 +24,10 @@ ul, li, a {
     text-decoration:none;
     list-style: none;
 }
+
+.bars, .find, .retour, .search-bar, .retour-click, .retour-clicks{
+    display: none;
+}
 .logo{
     width: 10%;
     margin-top: 0;
@@ -121,11 +125,20 @@ p, a {
     text-decoration: none;
     color: #2e3436;
 }
+.account{
+    margin-top: 22px;
+}
+.account a{
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
 .help a{
     color: white;
 }
 .help{
     margin-top: 22px;
+    margin-left: 10px;
 }
 
 /*######### LE SLIDER #########*/
@@ -146,13 +159,14 @@ p, a {
     right:5% !important;
     z-index: 9999 !important;
 }
-.slide-1{
+.slide-1, .slide-2, .slide-3{
     width: 50%;
     margin-right: auto;
     margin-left: auto;
     margin-top: -300px;
+    padding-bottom: 150px;
 }
-.slide-1 h2, .slide-1 p {
+.slide-1 h2, .slide-1 p, .slide-2 h2, .slide-2 p, .slide-3 h2, .slide-3 p  {
     text-align: center;
     color: white;
 }
