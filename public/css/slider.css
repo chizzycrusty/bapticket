@@ -28,11 +28,14 @@ ul, li, a {
 .bars, .find, .retour, .search-bar, .retour-click, .retour-clicks{
     display: none;
 }
-.logo{
+.logo, .show-nones{
     width: 10%;
     margin-top: 0;
-    margin-right: 5%;
-    margin-top: 8px;
+    margin-right: 3%;
+    margin-top: 12px;
+}
+.show-none{
+    display: none;
 }
 .search{
     width: 60%;
