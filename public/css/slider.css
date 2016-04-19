@@ -15,10 +15,10 @@
     margin-left: 5px;
     margin-top: 15px;
 }
-ul{
+.nav-nav {
     width: 100%;
 }
-ul, li, a {
+.nav-nav , li, .nav-nav  a {
     display:block;
     float:left;
     text-decoration:none;
