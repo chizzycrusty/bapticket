@@ -17,6 +17,9 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
     <link rel="stylesheet" type="text/css" href="{{asset("slick/slick/slick.css")}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset("slick/slick/slick-theme.css")}}"/>
+    {{--CSS HOME --}}
+    <link rel="stylesheet" type="text/css" href="{{asset("css/home-page.css")}}"/>
+    {{--CSS SLIDER home --}}
     <link rel="stylesheet" type="text/css" href="{{asset("css/slider.css")}}"/>
     <link rel="stylesheet" type="text/css" href="{{asset("css/slider-tab.css")}}" media="screen and (max-width: 1340px)"/>
     <link rel="stylesheet" type="text/css" href="{{asset("css/slider-mobile.css")}}" media="screen and (max-width: 640px)"/>
@@ -45,7 +48,7 @@
 <div class="menu">
     <div class="container-fluid menu-nav">
         <div class="barre-menu">
-            <ul>
+            <ul class="nav-nav">
                 <li class="bars" id="bars"><img src="{{ asset("img/menu-bars.png") }}" alt="barre de menu" class="img-responsive"></li>
                 <li class="logo" id="logo"><a href="{{ url('/') }}"><img src="{{ asset("img/logo.png") }}" alt="Logo WiTicket" class="img-responsive"></a></li>
                 <li class="find"><img src="{{ asset("img/search.png") }}" alt="barre de menu" class="img-responsive"></li>
@@ -104,41 +107,7 @@
     </div>
 </div>
 
-    <div class="slider">
-        <div>
-            <img src="{{asset("img/conf-1.jpg")}}" alt="" class="img-responsive">
-            <div class="slide-1">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur debitis dolores eaque expedita, iure porro rem sint unde! Autem corporis ex facilis fuga harum in iure reiciendis tempore ut voluptate.</p>
-                <div class="participe">
-                    <button class="participer">Participer</button>
-                    <button class="plus">En savoir plus</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <img src="{{asset("img/conf-2.jpg")}}" alt="" class="img-responsive">
-            <div class="slide-2">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis doloremque et facilis in laborum officiis porro, quae quas recusandae voluptas! Ab cumque eos ex ipsa mollitia officiis pariatur quo voluptatibus.</p>
-                <div class="participe">
-                    <button class="participer">Participer</button>
-                    <button class="plus">En savoir plus</button>
-                </div>
-            </div>
-        </div>
-        <div>
-            <img src="{{asset("img/conf-3.jpg")}}" alt="" class="img-responsive">
-            <div class="slide-3">
-                <h2>Lorem ipsum dolor sit amet</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab autem dolorem doloremque dolores est, harum, inventore ipsum, iusto laudantium modi molestiae omnis quis ratione repellat vero voluptas? Adipisci, necessitatibus?</p>
-                <div class="participe">
-                    <button class="participer">Participer</button>
-                    <button class="plus">En savoir plus</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
 
     @yield('content')

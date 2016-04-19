@@ -17,7 +17,7 @@
     .search, .co, .account, .help{
         display: none;
     }
-    ul{
+    .nav-nav{
         padding-left: 0px;
     }
     .bars{
