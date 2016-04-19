@@ -21,6 +21,7 @@ class CreateEventsTable extends Migration
             $table->text('content');
             $table->string('localisation');
             $table->bigInteger('places');
+            $table->bigInteger('placesTaken');
             $table->date('date');
             $table->string('duration');
             $table->text('materiel');

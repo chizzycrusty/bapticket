@@ -1,0 +1,59 @@
+body {
+    font-family: 'Lato';
+    background-color: #e8eaea;
+}
+
+/* Homepage */
+
+.fa-btn {
+    margin-right: 6px;
+}
+        
+.eventstitle {
+    text-align: center;
+}
+
+.imgevent {
+    width: 100%;
+    height: auto;
+}
+
+.borderevent {
+
+    padding: 0;
+    margin-top: 5%;
+    background-color: white;
+}
+
+.btnevent {
+    float: right;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    background-color: #49ada6;
+}
+
+.placesevent {
+    float: left;
+    margin-top: 2%;
+    color: grey;
+}
+
+.eventa {
+    color: grey;
+    font-size: 12px;
+}
+
+.bodyevent {
+    padding-right: 3%;
+    padding-left: 3%;
+    padding-bottom: 3%;
+}
+
+.titlehr {
+    border: 2px solid black;
+}
+
+.eventstitle {
+    margin-top: -0.15%;
+}
