@@ -115,7 +115,7 @@ ul, li, a {
     padding-right: 10px;
     float: left;
     border-radius: 5px;
-    background-color:#49ADA6;
+    background-color: rgba(73,173,166, 0.8);
 }
 .connexion{
     vertical-align: middle;
