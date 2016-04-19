@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Witickets</title>
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset("css/slider-tab.css")}}" media="screen and (max-width: 1340px)"/>
     <link rel="stylesheet" type="text/css" href="{{asset("css/slider-mobile.css")}}" media="screen and (max-width: 640px)"/>
     <link rel="stylesheet" type="text/css" href="{{asset("css/slider-mid-tab.css")}}" media="screen and (min-width: 641px) and (max-width: 999px) "/>
+    <link rel="stylesheet" type="text/css" href="{{asset("css/style.css")}}"/>
     {{--JS--}}
 
     <style>
