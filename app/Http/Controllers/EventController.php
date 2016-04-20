@@ -22,7 +22,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $list = Event::orderBy('created_at', 'desc')->paginate(10);
+        $list = Event::orderBy('created_at', 'desc')->paginate(8);
 
         return view('events.index', compact('list'));
 
@@ -88,7 +88,7 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        $event = Events::findOrFail($id);
+        $event = Event::findOrFail($id);
         return view('events.edit', compact('event'));
     }
 
@@ -103,7 +103,14 @@ class EventController extends Controller
     {
         $this -> validate($request, [
             'title' => 'required',
-            'content' => 'required'
+            'subject' => 'required',
+            'host' => 'required',
+            'sector' => 'required',
+            'content' => 'required',
+            'localisation' => 'required',
+            'places' => 'required',
+            'date' => 'required',
+            'duration' => 'required'
         ]);
 
         $event = Event::findOrFail($id);

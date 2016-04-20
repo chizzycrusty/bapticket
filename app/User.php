@@ -12,15 +12,25 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'surname', 'tel', 'email', 'password', 'adresse', 'postal', 'city', 'country', 
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function events() {
+        return $this->hasMany('App\Events');
+    }
+
+    public function setPasswordAttribute($password)
+    {   
+        $this->attributes['password'] = bcrypt($password);
+    }
 }
+ini_set('xdebug.max_nesting_level', 200); 
