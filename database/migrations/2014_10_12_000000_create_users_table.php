@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->integer('postal');
             $table->string('city');
             $table->string('country');
-            $table->binary('photo');
+            $table->string('photo');
             $table->string('socialfb')->nullable();
             $table->string('socialtt')->nullable();
             $table->string('socialli')->nullable();
