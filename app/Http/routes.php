@@ -20,5 +20,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('/event', 'EventController');
 
     Route::get('/admin', 'AdminController@index');
+
+    Route::resource('/orga', 'OrgaController');
     
 });
