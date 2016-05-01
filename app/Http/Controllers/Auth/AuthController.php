@@ -88,7 +88,7 @@ class AuthController extends Controller
             if (Input::file('image')->isValid()) {
                 $destinationPath = 'uploads'; // upload path
                 $extension = Input::file('image')->getClientOriginalExtension(); // getting image extension
-                $fileName = rand(11111,99999).'.'.$extension; // renameing image
+                $fileName = rand(11111,99999).'.'.$extension; // renaming image
                 Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
                 // sending back with message
                 var_dump($fileName);

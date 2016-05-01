@@ -28,6 +28,17 @@ class EventController extends Controller
 
     }
 
+    public function dashboardOrga()
+    {
+        $id = Auth::user()->id;
+
+        $list = Event::where('user_id', $id)->get();
+
+
+        return view('orgas.index', compact('list'));
+
+    }
+
     /**
      * Show the form for creating a new resource.
      *

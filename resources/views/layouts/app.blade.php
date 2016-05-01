@@ -97,6 +97,7 @@
                             <ul class="dropdown-menu" role="menu">
                                 @if(Auth::check())
                                     <li><a href="{{ route('event.create') }}">Créer un event</a></li>
+                                    <li><a href="{{ route('orga.index') }}">Créer un event</a></li>
                                 @endif
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
@@ -107,6 +108,7 @@
         </div>
     </div>
 </div>
+
 
 
 

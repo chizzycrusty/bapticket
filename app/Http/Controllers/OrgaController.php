@@ -17,10 +17,12 @@ class OrgaController extends Controller
      */
     public function index()
     {
-         $list = Event::find()->where('user_id', Auth::user('id'));
+        $id = Auth::user()->id;
+
+        $list = Event::where('user_id', $id)->get();
 
 
-        return view('events.index', compact('list'));
+        return view('orgas.index', compact('list'));
     }
 
     /**
